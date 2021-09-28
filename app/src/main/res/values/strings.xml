@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">View Pager</string>
     <string name="title_dynamicfeature">Module Title</string>
+    <string name="about_info">Приложение создано Медведевым Е.В. в рамках курса обучения Android разработке</string>
+    <string name="title_fragment">Заголовок</string>
+    <string name="text_fragment">Текст</string>
+    <string name="save_fragment">Сохранить</string>
 </resources>

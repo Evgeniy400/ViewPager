@@ -16,15 +16,31 @@
         app:title="boobaaa"
         app:titleTextColor="@color/white">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/add"
-            android:layout_gravity="end"
+        <ImageButton
+            android:id="@+id/imageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="end"
             android:padding="8dp"
-            android:src="@android:drawable/ic_input_add"/>
+            app:srcCompat="@android:drawable/ic_dialog_info"/>
+
     </androidx.appcompat.widget.Toolbar>
 
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="15dp"
+
+        app:srcCompat="@android:drawable/ic_menu_add" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
