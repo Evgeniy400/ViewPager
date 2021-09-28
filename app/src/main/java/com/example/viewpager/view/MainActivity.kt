@@ -8,6 +8,7 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.viewpager.R
+import model.Note
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,8 +29,10 @@ class MainActivity : AppCompatActivity() {
         startActivity(about)
     }
 
-    private fun viewPager(){
+    private fun viewPager() {
         val vPager = Intent(this, ViewPager::class.java)
         startActivity(vPager)
     }
+
+
 }
