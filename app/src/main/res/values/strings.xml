@@ -5,4 +5,5 @@
     <string name="title_fragment">Заголовок</string>
     <string name="text_fragment">Текст</string>
     <string name="save_fragment">Сохранить</string>
+    <string name="date_fragment">Дата</string>
 </resources>
