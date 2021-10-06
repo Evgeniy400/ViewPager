@@ -1,4 +1,5 @@
 package model
 
-data class MainModel(var notes: List<Note>) {
+data class MainModel(var notes: ArrayList<Note>) {
+
 }
