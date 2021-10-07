@@ -22,8 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:padding="8dp"
-            app:srcCompat="@android:drawable/ic_dialog_info"
-             />
+            app:srcCompat="@android:drawable/ic_dialog_info"/>
 
         <ImageButton
             android:id="@+id/imageButtonAdd"

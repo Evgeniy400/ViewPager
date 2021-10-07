@@ -1,4 +1,0 @@
-package presenter
-
-class NotePresenter {
-}

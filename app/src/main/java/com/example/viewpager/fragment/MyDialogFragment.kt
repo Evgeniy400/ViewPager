@@ -1,4 +1,4 @@
-package fragment
+package com.example.viewpager.fragment
 
 import android.app.AlertDialog
 import android.app.Dialog

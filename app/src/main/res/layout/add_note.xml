@@ -27,7 +27,8 @@
             android:ems="10"
             android:gravity="start"
             android:hint="@string/text_fragment"
-            android:inputType="textMultiLine" />
+            android:inputType="textMultiLine"
+            android:minHeight="48dp" />
 
         <Button
             android:id="@+id/button"
