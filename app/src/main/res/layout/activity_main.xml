@@ -4,41 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MainActivity"
-    tools:viewBindingIgnore="true">
+    tools:context=".view.MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="boobaaa"
-        app:titleTextColor="@color/white">
 
-        <ImageButton
-            android:id="@+id/imageButtonAbout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:padding="8dp"
-            app:srcCompat="@android:drawable/ic_dialog_info"/>
-
-        <ImageButton
-            android:id="@+id/imageButtonAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            app:srcCompat="@android:drawable/ic_menu_add"
-            app:layout_constraintRight_toLeftOf="@+id/imageButtonAbout" />
-
-    </androidx.appcompat.widget.Toolbar>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager2"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
 

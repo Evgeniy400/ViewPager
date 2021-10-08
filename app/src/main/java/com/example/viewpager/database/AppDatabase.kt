@@ -21,7 +21,7 @@ abstract class AppDatabase : RoomDatabase() {
                     "database"
                 ).build()
                 instance = newInstance
-                instance!! // без !! IDE считает что возвращаемый ти может быть null
+                instance!!
             }
         }
     }

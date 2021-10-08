@@ -8,7 +8,7 @@ import androidx.fragment.app.DialogFragment
 import com.example.viewpager.view.AboutActivity
 import java.lang.IllegalStateException
 
-class MyDialogFragment : DialogFragment() {
+class DialogAboutFragment : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return activity?.let {
             val builder = AlertDialog.Builder(it)
@@ -24,10 +24,8 @@ class MyDialogFragment : DialogFragment() {
                             AboutActivity::class.java
                         )
                     )
-
                 }
                 .create()
-
         } ?: throw IllegalStateException("Activity не может быть null")
     }
 }

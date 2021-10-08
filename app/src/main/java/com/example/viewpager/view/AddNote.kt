@@ -12,7 +12,7 @@ class AddNote : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.add_note)
 
-        findViewById<Button>(R.id.button).setOnClickListener(){
+        findViewById<Button>(R.id.button).setOnClickListener() {
             var intent = Intent()
             intent.putExtra("Title", findViewById<EditText>(R.id.editTextTitle).text.toString())
             intent.putExtra("Text", findViewById<EditText>(R.id.editTextText).text.toString())
