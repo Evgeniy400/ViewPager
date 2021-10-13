@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ViewPager">
         <activity
-            android:name=".view.AddNote"
+            android:name=".view.AddNoteActivity"
             android:exported="true" />
         <activity
             android:name=".view.MainActivity"

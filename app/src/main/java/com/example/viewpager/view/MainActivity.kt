@@ -2,14 +2,18 @@ package com.example.viewpager.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import androidx.core.view.get
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.ViewPager2
 import com.example.viewpager.R
 import com.example.viewpager.adapter.NotePagerAdapter
 import com.example.viewpager.database.AppDatabase
+import com.example.viewpager.fragment.ShowNoteFragment
 import com.example.viewpager.model.Note
 import com.example.viewpager.presenter.MainPresenter
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.launch
 
 class MainActivity : FragmentActivity(), IMainView {
@@ -25,27 +29,12 @@ class MainActivity : FragmentActivity(), IMainView {
 
         lifecycleScope.launch {
             viewPager.let {
-                adapter.setNotes(presenter.getAllNotes() as ArrayList<Note>)
+                presenter.initAdapter()
                 it.adapter = adapter
             }
         }
-
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        lifecycleScope.launch {
-            val title = data?.getStringExtra("Title").toString()
-            val text = data?.getStringExtra("Text").toString()
-            if (title != "null" && text != "null") {
-                presenter.addNote(
-                    data?.getStringExtra("Title").toString(),
-                    data?.getStringExtra("Text").toString()
-                )
-                adapter.setNotes(presenter.getAllNotes() as ArrayList<Note>)
-            }
-        }
-    }
 
     override fun onBackPressed() {
         super.onBackPressed()
@@ -53,5 +42,11 @@ class MainActivity : FragmentActivity(), IMainView {
             super.onBackPressed()
         else
             viewPager.currentItem -= 1
+    }
+
+    override fun updateAdapter() {
+        lifecycleScope.launch {
+            adapter.notesCount = presenter.getAllNotes().size
+        }
     }
 }

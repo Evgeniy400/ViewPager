@@ -1,23 +1,20 @@
 package com.example.viewpager.presenter
 
+import android.content.Intent
 import com.example.viewpager.database.AppDatabase
+import com.example.viewpager.model.MainModel
 import com.example.viewpager.model.Note
 import com.example.viewpager.view.IMainView
 
 class MainPresenter(
     private var view: IMainView,
-    private var db: AppDatabase
+    db: AppDatabase
 ) {
+    private val model = MainModel(db)
 
-    private suspend fun addNote(note: Note) {
-        db.noteDao().addNote(note)
+    suspend fun getAllNotes() = model.getAllNotes()
+
+    fun initAdapter() {
+        view.updateAdapter()
     }
-
-    suspend fun addNote(title: String, text: String) {
-        addNote(Note(title, text))
-    }
-
-    suspend fun getAllNotes() = db.noteDao().getAll()
-
-
 }

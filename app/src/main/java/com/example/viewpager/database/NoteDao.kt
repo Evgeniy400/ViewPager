@@ -10,6 +10,9 @@ interface NoteDao {
     @Query("SELECT * FROM notes")
     suspend fun getAll(): List<Note>
 
+    @Query("Select * from notes where id == :index")
+    suspend fun findNoteById(index: Long): Note
+
     @Insert
     suspend fun addNote(note: Note)
 

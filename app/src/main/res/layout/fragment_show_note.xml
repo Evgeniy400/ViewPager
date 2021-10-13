@@ -52,14 +52,14 @@
             android:id="@+id/NoteDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="right"
+            android:gravity="end"
             android:text="@string/date_fragment" />
 
         <TextView
             android:id="@+id/NoteText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/text_fragment"
+            android:text= "@string/text_fragment"
             android:textSize="16sp" />
     </LinearLayout>
 
